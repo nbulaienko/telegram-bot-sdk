@@ -259,6 +259,12 @@ class Api
         return new Message($response->getDecodedBody());
     }
 
+    public function sendInvoice(array $params)
+    {
+       $response = $this->post('sendInvoice', $params);
+
+       return $response;
+    }
     /**
      * Forward messages of any kind.
      *
